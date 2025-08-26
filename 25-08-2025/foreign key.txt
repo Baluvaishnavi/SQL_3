@@ -1,0 +1,27 @@
+show databases;
+create database sathyabama;
+use sathyabama;
+create table colleges(
+cId int primary key,
+cname varchar(20) not null
+);
+insert into colleges values(101,'sist'),(102,'srm'),(103,'vit');
+select* from colleges;
+create table departments(
+dId int primary key,
+dname varchar(20) not null,
+cId int not null,
+foreign key(cId) references college(cId) on delete cascade on update cascade
+);
+insert into departments values(1001,'cse',101),(1002,'ece',102),(1003,'eee',103);
+select* from departments;
+create table students1(
+sId int primary key,
+sname varchar(20) not null,
+dId int not null,
+foreign key(dId) references department(dId) on delete cascade on update cascade
+);
+insert into students1 values(10001,'vaish',1002),(10002,'trives',1001),(10003,'pree',1003);
+select* from students1;
+delete from colleges where cId=101;
+select* from colleges;
