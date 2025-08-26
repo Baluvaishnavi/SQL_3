@@ -1,0 +1,24 @@
+show databases;
+create database sathyabama3;
+use sathayabama3;
+create table mec(
+sid int,
+sname varchar(20),
+spno int
+);
+show tables from sathyabama3;
+desc mec;
+select * from mec;
+insert into mec values(1,'abc',123),(2,'def',234),(3,'ghi',345);
+select * from mec;
+alter table mec 
+add semail varchar(20);
+select * from mec;
+alter table mec
+drop spno;
+set sql_safe_updates=0;
+update mec set sname='xyz' where sname='def';
+set sql_safe_updates=1;
+select * from mec;
+
+

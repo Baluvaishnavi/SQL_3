@@ -1,0 +1,13 @@
+show databases;
+create database saThyabaMa;
+use saThyabaMa;
+create table CSE(
+sid int,
+sname varchar(20),
+spno int,
+sano int,
+scourse char(20)
+);
+show tables from saThyabaMa;
+desc cse;
+select * from cse;
