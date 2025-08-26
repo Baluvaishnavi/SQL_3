@@ -1,0 +1,20 @@
+show databases;
+create database sathyabama5;
+use sathyabama5;
+start transaction;
+create table students(
+sid int,
+sfname varchar(20),
+slname varchar(20),
+spno int
+);
+insert into students values(1,'apple','le',2);
+savepoint A;
+select * from students;
+insert into students values(2,'banana','na',4);
+savepoint B;
+select * from students;
+rollback to A;
+
+commit;
+select * from students;

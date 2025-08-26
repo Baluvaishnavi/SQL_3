@@ -1,0 +1,27 @@
+show databases;
+create database sathyabama5;
+use sathyabama5;
+create table student(
+sid int,
+sfname varchar(20),
+slname varchar(20),
+spno int
+);
+show tables from sathyabama5;
+desc student;
+select * from student;
+
+insert into student values(1,'apple','le',2),(2,'banana','na',4),(3,'cherry','ry',6),(5,'donkey','ey',7);
+select * from student;
+
+set sql_safe_updates=0;
+delete  from student where sid=5;
+set sql_safe_updates=1;
+
+truncate table  student;
+
+alter table student 
+drop slname;
+
+drop table student;
+
