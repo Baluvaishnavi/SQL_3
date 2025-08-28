@@ -1,0 +1,32 @@
+SHOW databases;
+CREATE DATABASE sathyabama;
+USE sathyabama;
+CREATE TABLE Worker (
+    WORKER_ID INT PRIMARY KEY,
+    FIRST_NAME VARCHAR(50),
+    LAST_NAME VARCHAR(50),
+    SALARY INT,
+    DEPARTMENT VARCHAR(50)
+);
+INSERT INTO Worker VALUES
+(1, 'Abhi',    'Kumar', 50000, 'HR'),
+(2, 'Sunitha', 'Vani',  60000, 'Admin'),
+(3, 'Veera',   'Rao',   70000, 'IT'),
+(4, 'Ramu',    'Naidu', 80000, 'IT'),
+(5, 'Meena',   'Shree', 55000, 'Finance'),
+(6, 'Arjun',   'Kumar', 45000, 'Finance'),
+(7, 'Kiran',   'M',     90000, 'Admin'),
+(8, 'Lakshmi', 'Devi',  40000, 'HR'),
+(9, 'Sunny',   'K',     65000, 'IT'),
+(10,'Priya',   'Rani',  75000, 'Finance'),
+(11,'Harsha',  'Sai',   72000, 'Admin'),
+(12,'Manoj',   'Reddy', 68000, 'HR');
+SELECT * FROM Worker
+ORDER BY SALARY DESC
+LIMIT 3;
+SELECT * FROM Worker
+ORDER BY WORKER_ID
+LIMIT 10 OFFSET 5;  
+SELECT * FROM Worker
+ORDER BY WORKER_ID
+LIMIT 10 OFFSET 4;  

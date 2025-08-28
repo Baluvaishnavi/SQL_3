@@ -1,0 +1,27 @@
+show databases;
+create database sathyabama;
+use sathyabama;
+create table staff_2(
+sid int primary key,
+sname varchar(20) not null,
+department varchar(20) not null,
+ssalary long not null
+);
+insert into staff_2 values(1,'vanitha','operations',800000),
+(2,'sunitha','Hr',700000),
+(3,'Veera','Manager',400000),
+(4,'Ramu','admin',200000),
+(5,'sunny','operations',200000);
+select department,count(department)from staff_2
+ where department not in('Hr' ,'admin')
+ group by department order by department;
+ select department,max(ssalary) from staff_2 
+  group by department order by department;
+;
+
+#using group by
+select department,count(department) from staff_2
+group by department; 
+
+#using order by
+select departmet,ssalary from staff_2 order by department asc;

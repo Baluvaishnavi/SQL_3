@@ -1,0 +1,29 @@
+show databases;
+create database sathyabama;
+use sathyabama;
+create table staff4(
+sid int primary key,
+sname varchar(10) not null,
+sdept varchar(20) not null,
+ssalary long not null
+);
+insert into staff4 values(1,'tri','operations',20000),
+(2,'vaish','hr',30000),
+(3,'harsh','manager',25000),
+(4,'vaishu','admin',70000),(5,'trivs','hr',40000),
+(6,'pre','manager',50000);
+select * from staff4;
+#Upper case
+select Upper('triveni');
+#Lower case
+select Lower('VaiShu');
+#ltrim()
+select ltrim('    harshi');
+#rtrim()
+select ('trivs     ');
+#trim()
+select Trim('        rani             ');
+#using limit------offset--
+select * from staff4 order by sname  limit 6  offset 2;
+
+
