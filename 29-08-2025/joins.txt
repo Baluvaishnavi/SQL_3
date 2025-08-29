@@ -1,0 +1,27 @@
+show databases;
+create database sathyabama;
+use sathyabama;
+create table students9(
+stdid int primary key,
+stdname varchar(20) not null,
+stddept varchar(10) not null
+);
+insert into students9 values(1,'pani','ece'),(2,'hani','cse'),(3,'suga','eee');
+select * from students9;
+
+create table exams(
+sid int primary key,
+smrks int not null
+);
+insert into exams values(1,99),(5,35),(2,80);
+select * from exams;
+
+select * from students9 cross join exams;
+
+select * from students9 s inner join exams e where s.stdid=e.sid;
+
+select * from students9 s left outer join exams e on s.stdid=e.sid;
+
+select * from students9 s right outer join  exams e on s.stdid=e.sid;
+
+select * from students9 s Full outer join  exams e on s.stdid=e.sid;
