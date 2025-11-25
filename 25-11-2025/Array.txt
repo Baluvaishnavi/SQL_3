@@ -1,0 +1,70 @@
+package Practise;
+
+import java.util.*;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
+public class Array {
+	public static void main(String[] args){
+			 int a[];
+			a=new int[40];
+			
+			
+			// Print an array in Java
+			int[] intArray = { 1, 2, 3, 4, 5 };
+			String intArrayString = Arrays.toString(intArray); 
+			// print directly will print reference value
+			System.out.println(intArray);			 
+			System.out.println(intArrayString);
+
+
+			//3. Check if an array contains a certain value
+			String[] stringArray = { "abc", "bcd", "cba", "dcb", "efg" };
+			boolean b = Arrays.asList(stringArray).contains("abc");
+			System.out.println(b);
+
+
+
+
+			//4. Concatenate two arrays
+			int[] Array = { 1, 2, 3, 4, 5 };
+			int[] intArray2 = { 6, 7, 8, 9, 10 };
+			// Apache Commons Lang library
+			int a1[] = ArrayUtils.addAll(Array, intArray2);
+			String s = Arrays.toString(a1);
+			System.out.println(s);
+
+
+
+
+			//6. Joins the elements of the provided array into a single String
+			// containing the provided list of elements
+			// Apache common lang
+			String j = StringUtils.join(new String[] { "a", "b", "c" }, ", ");
+			System.out.println(j);
+
+			
+			
+			//8. Convert an array to a set
+			String[] s1 = { "a", "b", "c", "d", "e","a" };
+			Set<String> set123 = new HashSet<String>(Arrays.asList(s1));
+			System.out.println(set123);
+
+
+
+			//9. Reverse an array
+			int[] intArrays = { 1, 2, 3, 4, 5 };
+			ArrayUtils.reverse(intArray);
+			System.out.println(Arrays.toString(intArrays));
+			
+
+
+
+			//10. Remove element of an array
+			int[] intArrayss = { 1, 2, 3, 4, 5 };
+			int[] removed = ArrayUtils.removeElement(intArrayss, 3);
+			 System.out.println(Arrays.toString(removed));
+
+		}
+	}
+

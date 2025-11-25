@@ -1,0 +1,94 @@
+package Practise;
+
+public class StringExample {
+	public static void main(String[] args) {
+		
+		String s="Radha";
+		String s1= " Radha is a cricketer ";
+		String s2=new String("Sachin");  
+		String s3=s.intern();  
+		int a=10;  
+		String s4=String.valueOf(a);  
+		String s5="Java is a programming language. Java is a platform. Java is an Island.";    
+		String replaceString=s5.replace("Java","Python");  
+		String s6="Sachin";  
+		String s7="Tendulkar";  
+		String s8=s6.concat(s7);  
+		String s9="Sumi";  
+		String s10="Suman";  
+        String s11=new String("Sumi");
+        String s12="Ratan";  
+        String s13="Sachin";  
+        String s14="Ratan";
+        String s15="javatpoint is a very good website";  
+        String replaceString1=s15.replaceAll("a","e");
+        String s16="java string split method by java point";  
+        String[] words=s16.split("\\s");
+       
+		
+		
+		//Cases
+		System.out.println(s);
+		System.out.println(s.toLowerCase());
+		System.out.println(s.toUpperCase());
+		
+		//White spaces
+		System.out.println(s1.trim());
+		
+		
+		//starting, ending
+		System.out.println(s.startsWith("K"));
+		System.out.println(s.endsWith("a"));
+		
+		
+		//character
+		System.out.println(s1.charAt(12));		
+		System.out.println(s.charAt(4));
+		
+		//length
+		System.out.println(s1.length());
+		
+		//intern
+		System.out.println(s3);
+		
+		
+		//value of
+		System.out.println(s4+10); 
+		
+		
+		//Replacing
+		System.out.println(replaceString); 
+		
+		
+		//Concat
+		System.out.println(s8);
+		
+		
+		//equals
+		System.out.println(s2.equals(s6));
+		System.out.println(s1.equals(s2));
+		
+		
+		//==
+		System.out.println(s9==s10);
+		System.out.println(s9==s11);
+		
+		
+		//compare to
+		System.out.println(s12.compareTo(s13));
+		System.out.println(s12.compareTo(s14));
+		System.out.println(s13.compareTo(s14));
+		
+		
+		//replaceall
+		System.out.println(replaceString1);
+		
+		
+		//split
+		for(String w:words){
+			System.out.println(w);
+	}	
+
+	}
+
+}
